@@ -60,7 +60,12 @@ jobs:
       - name: Deploy application
         env:
           RAILWAY_API_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
-        run: npx -y @railway/cli@5.63.1 up --service day12-agent --detach
+        run: >-
+          npx -y @railway/cli@5.63.1 up
+          --project ${{ vars.RAILWAY_PROJECT_ID }}
+          --environment production
+          --service day12-agent
+          --detach
       - name: Verify production health
         run: |
           for attempt in {1..12}; do
