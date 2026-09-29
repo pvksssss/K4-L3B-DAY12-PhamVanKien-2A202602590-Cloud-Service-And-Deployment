@@ -192,7 +192,7 @@ K4-L3B-DAY12-<HoVaTen>-<MSSV>-CloudServicesAndDeployment/
 ├── Dockerfile             # ★ CP2 — sửa thành multi-stage
 ├── docker-compose.yml     # ★ CP2 — thêm service agent
 ├── .dockerignore          # ★ CP2 — bổ sung mục còn thiếu
-├── nginx/nginx.conf       # Cho sẵn — mở rộng tùy chọn về load balancing
+├── nginx/nginx.conf       # Load balancer cho nhiều replica agent trong Compose
 ├── railway.toml           # CP5 — cấu hình Railway
 ├── render.yaml            # CP5 — cấu hình Render
 ├── screenshots/           # Ảnh chụp màn hình bản deploy
